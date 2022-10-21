@@ -1,0 +1,15 @@
+
+@import '../assets/styles/variables';
+@import '../assets/styles/fonts';
+
+.divForecast{
+    display: inline-block;
+    justify-content: space-between
+}
+
+.forecastMinMax h4{
+    flex-direction: column;
+    display: flex;
+    font-size: 12px;
+
+}

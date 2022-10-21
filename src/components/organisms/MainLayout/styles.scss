@@ -1,0 +1,104 @@
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/variables';
+
+
+body{
+    overflow: auto;
+
+    .desktop-main-layout-container{
+        height: 100%;
+        display: flex;
+        background-color: #FAFAFC;
+
+        overflow: hidden;
+
+
+        .mobile-nav{
+            display: none;
+        }
+        .right-layout-container{
+            height: 100%;
+            flex-direction: column;
+            display: flex;
+            background: #F1F2F8;
+            align-items: center;
+
+            .right-layout-content {
+                overflow: auto;
+                padding: 50px;
+                height: 100%;
+                display: flex;
+                gap: 45px;
+                flex-direction: row;
+                align-self: center;
+                min-width: 768px;
+            }
+
+            .row{
+                display: flex;
+                margin: 10px;
+                width: 80%;
+            }
+
+            .card{
+                display: flex;
+                padding: 0;
+                width: 100%;
+                border-left-width:5px;
+                border-left-color: #12416F;
+            }
+
+            .card-tittle{
+                font-size: 24px;
+            }
+            .card-text{
+                font-size: 12px;
+            }
+        }
+    }
+
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+
+    body .desktop-main-layout-container .right-layout-container{
+        background: none;
+        .right-layout-content {
+            padding: 16px;
+            width: 100%;
+            min-width: 382px;
+        }
+    }
+    .desktop-main-layout-container{
+        height: 100%;
+        display: flex;
+        background: none;
+        flex-direction: column;
+        /* height: 100vh; */
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        .right-layout-container{
+            flex: 1;
+            .right-layout-content {
+                padding: 0px;
+            }
+        }
+        .desktop-nav{
+            display: none;
+        }
+        .mobile-nav{
+            display: initial;
+        }
+    }
+
+    .footer-mobile-container{
+        padding: 0;
+    }
+
+    .base-header-container .base-header-user {
+        right: 95px;
+    }
+}
